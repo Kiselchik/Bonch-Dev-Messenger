@@ -1,16 +1,17 @@
 package bonch.dev.school.ui.fragments
 
+
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import androidx.fragment.app.DialogFragment
 import bonch.dev.school.R
 import bonch.dev.school.ui.activities.MainAppActivity
 
-class ProfileFragments: androidx.fragment.app.Fragment() {
+class PasswordFragments: DialogFragment() {
 
-    private lateinit var changePassword: Button
 
 
     override fun onCreateView(
@@ -18,17 +19,14 @@ class ProfileFragments: androidx.fragment.app.Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val view = inflater.inflate(R.layout.fragment_profile, container, false)
-        changePassword = view.findViewById(R.id.change_password)
-        setListener()
+
+        val view = inflater.inflate(R.layout.fragment_password, container, false)
+
+
+
 
         return view
     }
 
 
-    private fun setListener(){
-        changePassword.setOnClickListener{
-            (context as MainAppActivity).toPasswordFragments()
-        }
-    }
 }
