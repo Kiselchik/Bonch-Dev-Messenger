@@ -21,7 +21,6 @@ class PasswordFragments: DialogFragment() {
     ): View? {
 
         val view = inflater.inflate(R.layout.fragment_password, container, false)
-        
         return view
     }
 
